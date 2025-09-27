@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddhant Mujalgekar - AI Research Scientist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 5px solid rgba(0, 255, 255, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3), 0 0 50px rgba(0, 255, 255, 0.1);
+            background-image: url('https://i.postimg.cc/DfMpjj9q/289919e9-8323-4964-a2bf-ddcfd6bf47b9.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #00ffff;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        .profile-title {
+            font-size: 1.2rem;
+            color: #a0a0ff;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .profile-intro {
+            font-size: 1rem;
+            color: rgba(224, 224, 224, 0.9);
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00ffff;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .social-link:hover {
+            background: rgba(0, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .link-item {
+            background: rgba(30, 30, 50, 0.9);
+            border-radius: 25px;
+            padding: 20px 30px;
+            text-decoration: none;
+            color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .link-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
+            background: rgba(40, 40, 70, 0.95);
+            border-color: rgba(0, 255, 255, 0.4);
+        }
+
+        .link-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .ai-research { background: linear-gradient(135deg, #00ffff, #0080ff); color: white; }
+        .email { background: linear-gradient(135deg, #ff6b6b, #ee5a52); color: white; }
+        .youtube { background: linear-gradient(135deg, #ff0000, #cc0000); color: white; }
+        .portfolio { background: linear-gradient(135deg, #00ff88, #00cc6a); color: white; }
+        .linkedin { background: linear-gradient(135deg, #0077b5, #005885); color: white; }
+        .github { background: linear-gradient(135deg, #24292e, #1a1e22); color: white; }
+        .about { background: linear-gradient(135deg, #8a2be2, #6a1b9a); color: white; }
+
+        .link-content {
+            flex-grow: 1;
+        }
+
+        .link-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #00ffff;
+        }
+
+        .link-description {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+        }
+
+        .video-container {
+            background: rgba(30, 30, 50, 0.9);
+            border-radius: 25px;
+            padding: 25px;
+            margin: 20px 0;
+            animation: fadeInUp 1s ease-out 0.6s both;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .video-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #00ffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .rating-container {
+            background: rgba(30, 30, 50, 0.9);
+            border-radius: 25px;
+            padding: 25px;
+            margin: 20px 0;
+            animation: fadeInUp 1s ease-out 0.9s both;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .rating-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #00ffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            font-size: 2rem;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .star:hover,
+        .star.active {
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            transform: scale(1.1);
+        }
+
+        .rating-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 25px;
+            padding: 10px 20px;
+            color: #00ffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .action-btn:hover {
+            background: rgba(0, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+        }
+
+        .like-btn.liked {
+            background: rgba(255, 100, 100, 0.2);
+            border-color: rgba(255, 100, 100, 0.5);
+            color: #ff6464;
+        }
+
+        .like-btn.liked:hover {
+            background: rgba(255, 100, 100, 0.3);
+        }
+
+        .video-player {
+            width: 100%;
+            border-radius: 15px;
+            background: #000;
+            display: none;
+        }
+
+        .video-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .view-counter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #00ffff;
+            font-weight: 600;
+        }
+
+        .video-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #a0a0a0;
+        }
+
+        .music-controller {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(30, 30, 50, 0.95);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 50px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .music-controller:hover {
+            background: rgba(40, 40, 70, 0.95);
+            border-color: rgba(0, 255, 255, 0.5);
+        }
+
+        .music-btn {
+            background: none;
+            border: none;
+            color: #00ffff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .music-btn:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .music-info {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+            min-width: 120px;
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .volume-slider {
+            width: 80px;
+            height: 4px;
+            background: rgba(0, 255, 255, 0.2);
+            border-radius: 2px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .volume-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #00ffff;
+            cursor: pointer;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+
+        .share-btn {
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 8px;
+            padding: 8px 15px;
+            color: #00ffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .share-btn:hover {
+            background: rgba(0, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .video-metadata {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .metadata-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        .pulse-ring {
+            animation: pulse-ring 2s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: rgba(160, 160, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .typing-animation {
+            border-right: 2px solid rgba(0, 255, 255, 0.7);
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: rgba(0, 255, 255, 0.7) }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .profile-name {
+                font-size: 2rem;
+            }
+            
+            .link-item {
+                padding: 15px 20px;
+            }
+            
+            .link-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(0, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-image pulse" id="profileImage">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1 class="profile-name">Siddhant Mujalgekar</h1>
+            <p class="profile-title typing-animation">AI Research Scientist</p>
+            <p class="profile-intro">
+                Hey, my name is Siddhant, but I go by Siddhu. I'm an AI research scientist passionate about pushing the boundaries of artificial intelligence. It's an honor to meet you and share my journey in the world of AI and technology!
+            </p>
+            
+            <div class="social-links">
+                <a href="mailto:siddhantmujalgekar601@gmail.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="#" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="links-container">
+            <a href="#research" class="link-item">
+                <div class="link-icon ai-research">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">AI Research & Publications</div>
+                    <div class="link-description">Exploring cutting-edge AI technologies and research</div>
+                </div>
+            </a>
+
+            <a href="mailto:siddhantmujalgekar601@gmail.com" class="link-item">
+                <div class="link-icon email">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">Email Me for Collaborations</div>
+                    <div class="link-description">siddhantmujalgekar601@gmail.com</div>
+                </div>
+            </a>
+
+            <a href="#youtube" class="link-item">
+                <div class="link-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">My YouTube Channel</div>
+                    <div class="link-description">AI tutorials and tech insights</div>
+                </div>
+            </a>
+
+            <a href="#portfolio" class="link-item">
+                <div class="link-icon portfolio">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">Professional Portfolio</div>
+                    <div class="link-description">My projects and achievements</div>
+                </div>
+            </a>
+
+            <a href="#linkedin" class="link-item">
+                <div class="link-icon linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">Connect on LinkedIn</div>
+                    <div class="link-description">Professional network and updates</div>
+                </div>
+            </a>
+
+            <a href="#github" class="link-item">
+                <div class="link-icon github">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">GitHub Projects</div>
+                    <div class="link-description">Open source contributions and code</div>
+                </div>
+            </a>
+
+            <a href="#about" class="link-item">
+                <div class="link-icon about">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="link-content">
+                    <div class="link-title">About My Journey</div>
+                    <div class="link-description">My life, career, and passion for AI</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="video-container">
+            <div class="video-title">
+                <i class="fas fa-video"></i> My Message to the World
+            </div>
+            
+            <!-- YouTube Video Embed - Fixed for Netlify -->
+            <div class="video-wrapper">
+                <iframe 
+                    id="youtubeVideo"
+                    src="https://www.youtube.com/embed/r77x3EbhgpI" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    style="width: 100%; height: 315px; border-radius: 15px;">
+                </iframe>
+            </div>
+
+            <div class="video-controls" id="videoControls" style="display: flex;">
+                <div class="view-counter">
+                    <i class="fas fa-eye"></i>
+                    <span id="viewCount">0</span> views
+                </div>
+                <div class="video-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-calendar"></i>
+                        <span id="uploadDate">Published Today</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube Video</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="share-buttons" id="shareButtons" style="display: flex;">
+                <button class="share-btn" onclick="shareVideo('whatsapp')">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </button>
+                <button class="share-btn" onclick="shareVideo('telegram')">
+                    <i class="fab fa-telegram"></i> Telegram
+                </button>
+                <button class="share-btn" onclick="shareVideo('copy')">
+                    <i class="fas fa-link"></i> Copy Link
+                </button>
+                <button class="share-btn" onclick="openYouTube()">
+                    <i class="fab fa-youtube"></i> Watch on YouTube
+                </button>
+            </div>
+
+            <div class="video-metadata" id="videoMetadata" style="display: block;">
+                <div class="metadata-item">
+                    <span>Message:</span>
+                    <span>Personal introduction from Siddhant</span>
+                </div>
+                <div class="metadata-item">
+                    <span>Topic:</span>
+                    <span>AI Research & Career Journey</span>
+                </div>
+                <div class="metadata-item">
+                    <span>Platform:</span>
+                    <span>YouTube Unlisted Video</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Site Rating System -->
+        <div class="rating-container">
+            <div class="rating-title">
+                <i class="fas fa-star"></i> Rate My Portfolio
+            </div>
+            <div class="rating-stars" id="ratingStars">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+            </div>
+            <div class="rating-stats">
+                <div class="stat-item">
+                    <i class="fas fa-thumbs-up"></i>
+                    <span id="likeCount">0</span> likes
+                </div>
+                <div class="stat-item">
+                    <span id="avgRating">0.0</span>/5.0 
+                    (<span id="totalRatings">0</span> ratings)
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn like-btn" id="likeBtn" onclick="toggleLike()">
+                    <i class="fas fa-thumbs-up"></i> Like
+                </button>
+                <button class="action-btn" onclick="shareProfile()">
+                    <i class="fas fa-share"></i> Share Profile
+                </button>
+            </div>
+        </div>
+
+        <!-- Background Music Controller - Now with actual music -->
+        <div class="music-controller" id="musicController">
+            <button class="music-btn" id="playBtn" onclick="toggleMusic()">
+                <i class="fas fa-play"></i>
+            </button>
+            <div class="music-info" id="musicInfo">
+                Ambient Tech Music
+            </div>
+            <div class="volume-control">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="20">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </div>
+
+        <!-- Background music with actual audio -->
+        <audio id="backgroundMusic" loop>
+            <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8a5a5f0c9f.mp3?filename=ambient-piano-amp-strings-120799.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="footer">
+            <p>Thank you for visiting my profile! Let's connect and explore the future of AI together.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">© 2025 Siddhant Mujalgekar. Made with passion for AI and technology.</p>
+        </div>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 20;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 4 + 2;
+                const left = Math.random() * 100;
+                const animationDelay = Math.random() * 6;
+                const animationDuration = 6 + Math.random() * 4;
+
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${left}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDelay = `${animationDelay}s`;
+                particle.style.animationDuration = `${animationDuration}s`;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Rating system functionality
+        function setupRatingSystem() {
+            const stars = document.querySelectorAll('.star');
+            let currentRating = 0;
+            
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const rating = parseInt(this.getAttribute('data-rating'));
+                    currentRating = rating;
+                    
+                    // Update star display
+                    stars.forEach((s, index) => {
+                        if (index < rating) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                    
+                    // Update rating stats
+                    document.getElementById('totalRatings').textContent = 
+                        parseInt(document.getElementById('totalRatings').textContent) + 1;
+                    
+                    const currentAvg = parseFloat(document.getElementById('avgRating').textContent);
+                    const totalRatings = parseInt(document.getElementById('totalRatings').textContent);
+                    const newAvg = ((currentAvg * (totalRatings - 1)) + rating) / totalRatings;
+                    
+                    document.getElementById('avgRating').textContent = newAvg.toFixed(1);
+                    
+                    // Show thank you message
+                    alert(`Thank you for your ${rating}-star rating!`);
+                });
+            });
+        }
+
+        // Like functionality
+        function toggleLike() {
+            const likeBtn = document.getElementById('likeBtn');
+            const likeCount = document.getElementById('likeCount');
+            let isLiked = likeBtn.classList.contains('liked');
+            
+            if (isLiked) {
+                likeBtn.classList.remove('liked');
+                likeCount.textContent = parseInt(likeCount.textContent) - 1;
+            } else {
+                likeBtn.classList.add('liked');
+                likeCount.textContent = parseInt(likeCount.textContent) + 1;
+            }
+        }
+
+        // Share functionality
+        function shareProfile() {
+            const url = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Siddhant Mujalgekar - AI Research Scientist',
+                    url: url
+                });
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('Profile link copied to clipboard!');
+                });
+            }
+        }
+
+        // Music player functionality
+        function setupMusicPlayer() {
+            const audio = document.getElementById('backgroundMusic');
+            const playBtn = document.getElementById('playBtn');
+            const volumeSlider = document.getElementById('volumeSlider');
+            let isPlaying = false;
+            
+            // Set initial volume
+            audio.volume = volumeSlider.value / 100;
+            
+            // Play/pause toggle
+            window.toggleMusic = function() {
+                if (isPlaying) {
+                    audio.pause();
+                    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                } else {
+                    audio.play().catch(e => {
+                        console.log('Audio play failed:', e);
+                        // Auto-play might be blocked, show a message
+                        alert('Click the play button to start background music');
+                    });
+                    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                }
+                isPlaying = !isPlaying;
+            };
+            
+            // Volume control
+            volumeSlider.addEventListener('input', function() {
+                audio.volume = this.value / 100;
+            });
+            
+            // Handle audio ending
+            audio.addEventListener('ended', function() {
+                isPlaying = false;
+                playBtn.innerHTML = '<i class="fas fa-play"></i>';
+            });
+        }
+
+        // Video sharing functionality
+        function shareVideo(platform) {
+            const videoUrl = 'https://youtu.be/r77x3EbhgpI';
+            let shareUrl = '';
+            
+            switch(platform) {
+                case 'whatsapp':
+                    shareUrl = `https://api.whatsapp.com/send?text=Check out this video from Siddhant: ${videoUrl}`;
+                    break;
+                case 'telegram':
+                    shareUrl = `https://t.me/share/url?url=${videoUrl}&text=Check out this video from Siddhant`;
+                    break;
+                case 'copy':
+                    navigator.clipboard.writeText(videoUrl).then(() => {
+                        alert('Video link copied to clipboard!');
+                    });
+                    return;
+            }
+            
+            if (shareUrl) {
+                window.open(shareUrl, '_blank');
+            }
+        }
+
+        function openYouTube() {
+            window.open('https://youtu.be/r77x3EbhgpI', '_blank');
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            setupRatingSystem();
+            setupMusicPlayer();
+
+            // Profile image click to upload
+            const profileImage = document.getElementById('profileImage');
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = 'image/*';
+            fileInput.style.display = 'none';
+            document.body.appendChild(fileInput);
+
+            profileImage.addEventListener('click', function() {
+                fileInput.click();
+            });
+
+            fileInput.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        profileImage.style.backgroundImage = `url(${e.target.result})`;
+                        profileImage.classList.add('has-photo');
+                        profileImage.innerHTML = '';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Add click effects to links
+            const links = document.querySelectorAll('.link-item');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Add ripple effect
+                    const ripple = document.createElement('div');
+                    ripple.style.position = 'absolute';
+                    ripple.style.borderRadius = '50%';
+                    ripple.style.background = 'rgba(0, 255, 255, 0.3)';
+                    ripple.style.transform = 'scale(0)';
+                    ripple.style.animation = 'ripple 0.6s linear';
+                    ripple.style.left = (e.clientX - e.target.offsetLeft) + 'px';
+                    ripple.style.top = (e.clientY - e.target.offsetTop) + 'px';
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            // Add typing animation restart on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'none';
+                        setTimeout(() => {
+                            entry.target.style.animation = 'typing 3s steps(40, end), blink-caret 0.75s step-end infinite';
+                        }, 100);
+                    }
+                });
+            });
+
+            const typingElement = document.querySelector('.typing-animation');
+            if (typingElement) {
+                observer.observe(typingElement);
+            }
+        });
+
+        // Add enhanced CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInNotif {
+                from {
+                    transform: translateX(400px) scale(0.8);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0) scale(1);
+                    opacity: 1;
+                }
+            }
+            @keyframes slideOutNotif {
+                to {
+                    transform: translateX(400px) scale(0.8);
+                    opacity: 0;
+                }
+            }
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            .link-item {
+                position: relative;
+                overflow: hidden;
+            }
+            .star {
+                transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+            .star:hover {
+                transform: scale(1.2) rotate(5deg);
+            }
+            .action-btn {
+                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+            .share-btn {
+                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+            .social-link {
+                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
